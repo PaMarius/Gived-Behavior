@@ -1,5 +1,5 @@
 const makeUser = function () {
-  let evozon = "";
+  let evozon = ""; 
   return {
     evozon,
     jump: function () {
