@@ -1,30 +1,34 @@
 const makeUser = function () {
-  var evozon = null;
-
+  let evozon = "";
+  // console.log(typeof evozon);
   return {
+    evozon,
     jump: function () {
-      this.evozon = "jumping";
-      this.log();
+      this.evozon += "jumping, ";
+      return this;
     },
     speak: function () {
-      this.evozon = "speaking";
-      console.log(this.evozon);
+      this.evozon += "speaking, ";
+      return this;
     },
     run: function () {
-      return console.log("running");
+      this.evozon += "running, ";
+      return this;
     },
     swim: function () {
-      return console.log("swimming");
+      this.evozon += "swimming, ";
+      return this;
     },
     sleep: function () {
-      return console.log("sleeping");
+      this.evozon += "sleeping, ";
+      return this;
     },
     exec: function () {
-      return console.log("");
+      console.log(this.evozon);
     },
   };
 };
 
 const user = makeUser();
 
-user.jump().speak();
+user.sleep().swim().speak().jump().swim().sleep().run().run().exec();
