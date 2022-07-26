@@ -1,6 +1,5 @@
 const makeUser = function () {
   let evozon = "";
-  // console.log(typeof evozon);
   return {
     evozon,
     jump: function () {
